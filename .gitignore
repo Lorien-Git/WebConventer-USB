@@ -1,0 +1,20 @@
+# Build artifacts & temporary directories
+temp/
+temp_debug/
+build/
+*.pdb
+*.obj
+*.o
+*.ninja_deps
+*.ninja_log
+
+# IDE & Editor files
+.vs/
+.vscode/
+.idea/
+*.user
+
+# Windows Thumbs & OS files
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/

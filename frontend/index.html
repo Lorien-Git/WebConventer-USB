@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webconventer USB</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+    </div>
+    
+    <div class="app-container">
+        <header>
+            <h1>Webconventer <span class="accent">USB</span></h1>
+            <p>FAT32 ⇄ EXT4</p>
+        </header>
+
+        <div id="updateBanner" class="update-banner hidden">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <i class="fas fa-sparkles" style="color: #60a5fa;"></i>
+                <span id="updateText">New version available!</span>
+            </div>
+            <a id="updateLink" href="https://github.com/Lorien-Git/WebConventer-USB/releases" target="_blank" class="update-btn"><i class="fas fa-download"></i> Update</a>
+        </div>
+        
+        <main>
+            <div class="social-links">
+                <a href="https://github.com/Lorien-Git/WebConventer-USB/" target="_blank" class="social-btn github"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://t.me/webdumper" target="_blank" class="social-btn telegram"><i class="fab fa-telegram"></i> Telegram</a>
+            </div>
+
+            <div class="card disk-selector-card">
+                <label for="diskSelect">Select USB Drive</label>
+                <div class="select-wrapper">
+                    <select id="diskSelect">
+                        <option value="">Loading drives...</option>
+                    </select>
+                </div>
+                <button id="refreshDisksBtn" class="btn btn-secondary"><i class="fas fa-sync-alt"></i></button>
+            </div>
+            
+            <div class="actions-grid">
+                <div class="card action-card primary-action">
+                    <h3>Smart Convert</h3>
+                    <p>Automatically backups all your files and converts the file system.</p>
+                    <button id="convertBtn" class="btn btn-primary">Convert File System</button>
+                </div>
+                
+                <div class="card action-card">
+                    <h3>Restore Data</h3>
+                    <p>Restore your files from a previously created .webcnv backup archive.</p>
+                    <button id="restoreBtn" class="btn btn-secondary">Restore Backup</button>
+                </div>
+            </div>
+            
+            <div id="statusArea" class="card status-card hidden">
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <div class="spinner" id="spinner"></div>
+                    <p id="statusText" style="margin: 0; font-weight: 500;">Processing...</p>
+                </div>
+                <div id="progressBarContainer" class="hidden" style="width: 100%; height: 8px; background: rgba(255,255,255,0.1); border-radius: 4px; overflow: hidden;">
+                    <div id="progressBar" style="width: 0%; height: 100%; background: var(--accent-color); transition: width 0.3s ease;"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
