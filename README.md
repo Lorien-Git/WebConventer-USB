@@ -31,3 +31,5 @@ Credits: @Lorien-Git, @tytso, @yhirose, @richgel999
 
 Copyright (c) 2026 Lorien-Git. All rights reserved. 
 No one is permitted to copy, modify, or distribute this software or any part of it without explicit permission.
+
+<img width="907" height="647" alt="image" src="https://github.com/user-attachments/assets/6e56488c-1097-42eb-90d0-704e972555bd" />
